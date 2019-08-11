@@ -1,13 +1,23 @@
 <template>
-  <HelloWorld />
+  <v-container>
+    <customer-selector/>
+    <invoice-calculator/>
+  </v-container>
 </template>
 
 <script>
-import HelloWorld from '../components/HelloWorld';
+import CustomerSelector from '@/components/CustomerSelector'
+import InvoiceCalculator from '@/components/InvoiceCalculator'
 
 export default {
+  name: 'Home',
   components: {
-    HelloWorld,
-  },
-};
+    CustomerSelector,
+    InvoiceCalculator
+  }
+}
 </script>
+
+<style scoped>
+
+</style>
