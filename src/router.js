@@ -6,6 +6,7 @@ Vue.use(Router)
 
 export default new Router({
   mode: 'history',
+  caseSensitive: false,
   base: process.env.BASE_URL,
   routes: [
     {
@@ -20,6 +21,16 @@ export default new Router({
       // this generates a separate chunk (about.[hash].js) for this route
       // which is lazy-loaded when the route is visited.
       component: () => import(/* webpackChunkName: "about" */ './views/About.vue')
+    },
+    {
+      path: '/404',
+      name: '404',
+      component: () => import(/* webpackChunkName: "about" */ './views/NotFound'),
+      props: true
+    },
+    {
+      path: '*',
+      redirect: { name: '404' }
     }
   ]
 })
