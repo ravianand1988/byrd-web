@@ -1,4 +1,5 @@
 # byrd-web
+> A Vue.js web app for Byrd staff to calculate customer invoices.
 
 ## Project setup
 ```
