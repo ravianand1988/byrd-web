@@ -15,8 +15,8 @@
             @blur="$v.customerId.$touch()"
           ></v-select>
           <v-menu
-            ref="menu1"
-            v-model="menu1"
+            ref="calendarMenu1"
+            v-model="calendarMenu1"
             :close-on-content-click="false"
             :return-value.sync="startDate"
             transition="scale-transition"
@@ -35,13 +35,13 @@
             </template>
             <v-date-picker v-model="startDate" no-title scrollable>
               <v-spacer></v-spacer>
-              <v-btn text color="primary" @click="menu1 = false">Cancel</v-btn>
-              <v-btn text color="primary" @click="$refs.menu1.save(startDate)">OK</v-btn>
+              <v-btn text color="primary" @click="calendarMenu1 = false">Cancel</v-btn>
+              <v-btn text color="primary" @click="$refs.calendarMenu1.save(startDate)">OK</v-btn>
             </v-date-picker>
           </v-menu>
           <v-menu
-            ref="menu2"
-            v-model="menu2"
+            ref="calendarMenu2"
+            v-model="calendarMenu2"
             :close-on-content-click="false"
             :return-value.sync="endDate"
             transition="scale-transition"
@@ -60,8 +60,8 @@
             </template>
             <v-date-picker v-model="endDate" no-title scrollable>
               <v-spacer></v-spacer>
-              <v-btn text color="primary" @click="menu2 = false">Cancel</v-btn>
-              <v-btn text color="primary" @click="$refs.menu2.save(endDate)">OK</v-btn>
+              <v-btn text color="primary" @click="calendarMenu2 = false">Cancel</v-btn>
+              <v-btn text color="primary" @click="$refs.calendarMenu2.save(endDate)">OK</v-btn>
             </v-date-picker>
           </v-menu>
           <v-btn type="submit"
@@ -84,8 +84,8 @@ export default {
   components: {},
   data () {
     return {
-      menu1: false, // refactor naming
-      menu2: false,
+      calendarMenu1: false,
+      calendarMenu2: false,
       customerId: null,
       startDate: new Date().toISOString().substr(0, 10),
       endDate: new Date().toISOString().substr(0, 10)
