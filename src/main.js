@@ -4,8 +4,10 @@ import router from './router'
 import store from './store/store'
 import api from './api'
 import vuetify from './plugins/vuetify'
+import Vuelidate from 'vuelidate'
 import Notifications from 'vue-notification'
 
+Vue.use(Vuelidate)
 Vue.use(Notifications)
 
 Vue.config.productionTip = false
