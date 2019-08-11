@@ -1,6 +1,6 @@
 <template>
   <v-card width="" class="mx-auto mt-5">
-    <v-card-title>BYRD Customer Invoice generator:</v-card-title>
+    <v-card-title>BYRD Customer Invoice Calculator:</v-card-title>
     <v-form @submit.prevent="submit">
       <v-card-text>
         <v-layout wrap justify-space-around>
