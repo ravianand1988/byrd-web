@@ -33,7 +33,6 @@ module.exports = {
     'src/**/*.{js,vue}',
     '!**/node_modules/**',
     '!**/tests/e2e/**',
-    '!tests/e2e/specs/test.js',
     '!src/main.js',
     '!src/app.vue',
     '!src/api/index.js',

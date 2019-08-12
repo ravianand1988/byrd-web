@@ -15,7 +15,8 @@ function mountInvoiceCalculator () {
     store: {
       order: {
         state: {
-          orders: []
+          orders: [],
+          currentCustomer: {}
         },
         actions: {
           fetchOrders: () => {}
@@ -30,6 +31,10 @@ function mountInvoiceCalculator () {
           }
         }
       }
+    },
+    methods: {
+      daysDifference: () => 0,
+      totalPrice: () => 0.00
     }
   }))
 }
